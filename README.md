@@ -2,8 +2,10 @@
 
 A small system that displays a daily positive message on a WordPress site using CSV data.
 The data is preprocessed using Excel VBA and then displayed via a custom WordPress plugin.
+CSVデータを使用してWordPressサイトに毎日ポジティブなメッセージを表示する小規模システムです。
+データはExcel VBAで前処理され、カスタムWordPressプラグインを介して表示されます。
 
-##構成図(PDF)
+構成図(PDF)
 こちらからご覧ください
 →https://github.com/penguin-job/daily-positive-word-plugin/blob/main/sys-01_portfolio.pdf
 
