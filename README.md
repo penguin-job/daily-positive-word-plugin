@@ -1,38 +1,65 @@
 # Daily Positive Word System
 
-A small system that displays a daily positive message on a WordPress site using CSV data.
-The data is preprocessed using Excel VBA and then displayed via a custom WordPress plugin.
+CSVデータをもとに、日替わりでポジティブなメッセージを表示するシステムです。
+データはExcel VBAで前処理を行い、WordPressのカスタムプラグインで表示しています。
 
-CSVデータを使用してWordPressサイトに毎日ポジティブなメッセージを表示する小規模システムです。
-データはExcel VBAで前処理され、カスタムWordPressプラグインを介して表示されます。
+---
 
-構成図(PDF)
-こちらからご覧ください
-→https://github.com/penguin-job/daily-positive-word-plugin/blob/main/sys-01_portfolio.pdf
+## システム構成図
 
-## Overview
+構成図（PDF）はこちら
+→ https://github.com/penguin-job/daily-positive-word-plugin/blob/main/sys-01_portfolio.pdf
 
-This project demonstrates a simple workflow for managing and displaying daily quotes.
-CSV data is prepared and cleaned with Excel VBA, then loaded by a WordPress plugin that displays a different message each day.
+---
 
-## System Flow
+## 概要
 
-CSV Data  
+本プロジェクトでは、日々のポジティブな言葉を管理・表示するシンプルな仕組みを構築しました。
+CSVデータをExcel VBAで整形・加工し、そのデータをWordPressプラグインで読み込み、日替わりでメッセージを表示します。
+
+---
+
+## システムの流れ
+
+```
+CSVデータ  
 ↓  
-Excel VBA (duplicate check / formatting)  
+Excel VBA（重複チェック・整形）  
 ↓  
-Processed CSV  
+加工済みCSV  
 ↓  
-WordPress Plugin  
+WordPressプラグイン  
 ↓  
-Daily message displayed on website
+Webサイトに日替わり表示  
+```
 
-## Features
+---
 
-- Displays a different message each day
-- CSV-based data management
-- Data preprocessing using Excel VBA
-- WordPress shortcode support
-- Lightweight custom plugin
+## 主な機能
 
-## Repository Structure
+* 日替わりでメッセージを表示
+* CSVによるデータ管理
+* Excel VBAによる前処理
+* WordPressショートコード対応
+* 軽量なカスタムプラグイン
+
+---
+
+## リポジトリ構成
+
+```
+daily-positive-word-plugin/
+├ excel-vba/
+│   ├ mod01_Main.bas            # メイン処理
+│   ├ mod10_UI_Control.bas      # UI制御
+│   ├ mod20_IO_File.bas         # ファイル入出力
+│   ├ mod30_Biz_Process.bas     # データ加工ロジック
+│   └ mod90_Util.bas            # 共通ユーティリティ
+├ sample-data/
+│   └ quotes.csv                # ポジティブワードデータ
+├ wordpress-plugin/
+│   └ daily-positive-word.php   # WordPressプラグイン本体
+├ README.md
+└ sys-01_portfolio.pdf          # システム構成図
+```
+
